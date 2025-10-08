@@ -35,7 +35,7 @@ class Formacion {
   var locomotoras= []
   const vagones= []
   // 1 Añadir un vagón a una formación.
-  method aniadirVagonDeCarga(vagon){
+  method aniadirVagon(vagon){
     vagones.add(vagon)
   }
   
@@ -96,6 +96,7 @@ class VagonDePasajeros inherits Vagon {
     const largo
     const ancho
     method puedeSostener() =  largo*self.anchoUtil()
+    method pesoMaximo()= puedeSostener() * 80
     method anchoUtil() {
       if (ancho > 2.5)
       return 10
