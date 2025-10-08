@@ -95,7 +95,7 @@ class Vagon {
 class VagonDePasajeros inherits Vagon {
     const largo
     const ancho
-    method pesoMaximo() =  largo*self.anchoUtil()
+    method puedeSostener() =  largo*self.anchoUtil()
     method anchoUtil() {
       if (ancho > 2.5)
       return 10
