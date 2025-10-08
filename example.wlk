@@ -26,8 +26,10 @@ class Deposito {
         return 'no hay locomotora adecuada en deposito'
     }   
     }
-    method hayLocomotoraAdecuada(formacion)= locomotoras.any{locomotora =>  locomotora.arraseUtil() - formacion.pesoRestante() > 0}
-    method locomotoraAdecuada(formacion)= locomotoras.find{locomotora =>  locomotora.arraseUtil() - formacion.pesoRestante() > 0}
+    method hayLocomotoraAdecuada(formacion) = 
+      locomotoras.any{locomotora =>  locomotora.arraseUtil() - formacion.pesoRestante() > 0}
+    method locomotoraAdecuada(formacion) = 
+      locomotoras.find{locomotora =>  locomotora.arraseUtil() - formacion.pesoRestante() > 0}
   }
 class Formacion {
   var locomotoras= []
